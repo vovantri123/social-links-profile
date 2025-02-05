@@ -28,7 +28,7 @@
             }
 
             body {
-                /* background-color: hsl(0, 0%, 8%); */
+                background-color: hsl(0, 0%, 8%);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -42,6 +42,7 @@
                 max-width: 390px;
                 min-width: 330px;
 
+                border: 1px solid rgba(255, 255, 255, 0.321);
                 height: 500px;
                 background-color: hsl(0, 0%, 12%);
                 display: flex;
@@ -89,19 +90,18 @@
                 text-decoration: none;
                 text-align: center;
                 font-weight: 600;
-                -webkit-tap-highlight-color: transparent; /* Xóa hiệu ứng mặc định */
+                -webkit-tap-highlight-color: transparent; /* Xóa hiệu ứng mặc định khi chạm trên mobile */
             }
 
             a.btn:active {
-                background-color: hsl(0, 0%, 30%); /* Đổi màu khi nhấn */
+                background-color: hsl(75, 94%, 57%);
             }
 
-            @media only screen and (max-width: 740px){
+            @media only screen and (max-width: 740px) {
                 a.btn {
                     padding: 10px 80px;
                 }
             }
-
         </style>
     </head>
     <body>
