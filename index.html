@@ -28,7 +28,7 @@
             }
 
             body {
-                background-color: hsl(0, 0%, 8%);
+                /* background-color: hsl(0, 0%, 8%); */
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -36,13 +36,19 @@
             }
 
             .profile-container {
-                width: 390px;
+                /* Do flex làm nó chiếm đủ nội dung cần chiếm nên cần chỉnh width:100%; */
+                /* Responsive using max-width, min-width and width:100% */
+                width: 100%;
+                max-width: 390px;
+                min-width: 330px;
+
                 height: 500px;
                 background-color: hsl(0, 0%, 12%);
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 border-radius: 12px;
+                margin: 0 12px;
             }
 
             .info-group {
@@ -74,26 +80,24 @@
                 margin-bottom: 20px;
             }
 
-            .btn-group {
-        
-            }
-
-            .btn {
-                width: 325px;
-                height: 40px;
+            a.btn {
+                display: block;
                 background-color: hsl(0, 0%, 20%);
                 margin-top: 10px;
                 border-radius: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
+                padding: 10px 90px;
+                text-decoration: none;
+                text-align: center;
+                font-weight: 600;
+                -webkit-tap-highlight-color: transparent; /* Xóa hiệu ứng mặc định */
+                transition: background-color 0.2s ease;
             }
 
-            .btn a {
-                text-decoration: none;
-                font-weight: 600;
+            a.btn:active {
+                background-color: hsl(0, 0%, 30%); /* Đổi màu khi nhấn */
             }
+
+
         </style>
     </head>
     <body>
@@ -106,13 +110,13 @@
             </div>
 
             <div class="btn-group">
-                <div class="btn"><a href="#">GitHub</a></div>
+                <a class="btn" href="#">GitHub</a>
 
-                <div class="btn"><a href="#">Frontend Mentor</a></div>
+                <a class="btn" href="#">Frontend Mentor</a>
 
-                <div class="btn"><a href="#">LinkedIn</a></div>
-                <div class="btn"><a href="#">Twitter</a></div>
-                <div class="btn"><a href="#">Instagram</a></div>
+                <a class="btn" href="#">LinkedIn</a>
+                <a class="btn" href="#">Twitter</a>
+                <a class="btn" href="#">Instagram</a>
             </div>
         </div>
     </body>
