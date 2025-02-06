@@ -93,8 +93,13 @@
                 -webkit-tap-highlight-color: transparent; /* Xóa hiệu ứng mặc định khi chạm trên mobile */
             }
 
-            a.btn:active {
+            a.btn:hover {
                 background-color: hsl(75, 94%, 57%);
+                color: hsl(0, 0%, 20%);
+            }
+
+            a.btn:active {
+                background-color: hsla(75, 94%, 57%, 0.8);
             }
 
             @media only screen and (max-width: 740px) {
