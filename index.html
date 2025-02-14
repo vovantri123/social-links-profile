@@ -96,6 +96,12 @@
             a.btn:hover {
                 background-color: hsl(75, 94%, 57%);
                 color: hsl(0, 0%, 20%);
+                /* 
+                    - Trên mobile, khi bạn chạm (tap) vào nút, trình duyệt sẽ: 
+                        + Kích hoạt :hover, nhưng không xóa đi ngay cả khi bạn đã buông tay. 
+                        + Giữ trạng thái :hover cho đến khi bạn chạm vào vùng khác.
+                    -> Nút vẫn vàng sau khi click thay vì trở lại màu cũ (Điều này k ảnh hưởng, do trên thực tế sau khi click thì người dùng sẽ chuyển hướng sang trang khác)
+                */
             }
 
             a.btn:active {
